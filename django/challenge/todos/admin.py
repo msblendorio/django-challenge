@@ -1,3 +1,18 @@
 from django.contrib import admin
 
-# Register your models here.
+from todos.models import Todo
+
+
+@admin.register(Todo)
+class TodoAdmin(admin.ModelAdmin):
+    list_display = ('id', 'date', 'order', 'description', 'is_completed', 'priority',)
+    fieldsets = (
+        ('Info', {
+            'fields': (
+                'date',
+                'description',
+                'is_completed',
+                'order',
+            )
+        }),
+    )
