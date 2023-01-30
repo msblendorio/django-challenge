@@ -1,1 +1,1 @@
-# django-challenge
+# 🐍 Python/Django Backend Challenge! 🚀
