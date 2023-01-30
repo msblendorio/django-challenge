@@ -9,9 +9,11 @@ class Todo(models.Model):
 
     date = models.DateField()
     order = models.IntegerField()
-    description = models.TextField()  # todo: wrong field, use CharField with max_len=200
-    is_completed = models.BooleanField(default=True)  # todo: wrong default -> False  # Todo, use me in Admin with Select
+    description = models.CharField(max_length=128)
+    is_completed = models.BooleanField(default=False)
     priority = models.IntegerField(default=Priority.LOW, choices=Priority.choices)
+    created_at = models.DateTimeField()
+    updated_at = models.DateTimeField()
 
     def __str__(self):
         return self.description
