@@ -13,9 +13,6 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 
-# Get Env
-mode = os.environ.get('MODE')
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -44,7 +41,6 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'django_filters',
-    'corsheaders',
 
     'todos',
 ]
@@ -52,18 +48,12 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-
-# CORS Headers
-
-CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'main.urls'
 

@@ -23,11 +23,3 @@ urlpatterns = [
 
     path('apis/', include('todos.apis.urls')),
 ]
-
-
-# Utils
-frct_admin_label = 'Fuoricittà Challenge'
-admin.site.site_url = 'https://fuoricitta.it/'
-admin.site.site_header = frct_admin_label
-admin.site.site_title = frct_admin_label
-admin.site.index_title = frct_admin_label
