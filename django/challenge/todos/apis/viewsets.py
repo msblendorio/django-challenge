@@ -10,5 +10,5 @@ class TodoViewSet(ModelViewSet):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter]
-    filterset_fields = ['priority', 'date']
+    filterset_fields = ['effort', 'date']
     search_fields = ['description', ]

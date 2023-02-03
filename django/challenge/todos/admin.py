@@ -5,7 +5,7 @@ from todos.models import Todo
 
 @admin.register(Todo)
 class TodoAdmin(admin.ModelAdmin):
-    list_display = ('id', 'date', 'order', 'description', 'is_completed', 'priority',)
+    list_display = ('id', 'date', 'order', 'description', 'is_completed', 'effort',)
     fieldsets = (
         ('Info', {
             'fields': (

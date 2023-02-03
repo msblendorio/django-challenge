@@ -6,7 +6,7 @@ from django.dispatch import receiver
 
 
 class Todo(models.Model):
-    class Priority(models.IntegerChoices):
+    class Effort(models.IntegerChoices):
         LOW = 1
         MEDIUM = 2
         HIGH = 3
@@ -15,7 +15,7 @@ class Todo(models.Model):
     order = models.IntegerField()
     description = models.CharField(max_length=128)
     is_completed = models.BooleanField(default=False)
-    priority = models.IntegerField(default=Priority.LOW, choices=Priority.choices)
+    effort = models.IntegerField(default=Effort.LOW, choices=Effort.choices)
     created_at = models.DateTimeField()
     updated_at = models.DateTimeField()
 

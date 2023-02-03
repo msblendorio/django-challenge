@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('order', models.IntegerField()),
                 ('description', models.CharField(max_length=2)),
                 ('is_completed', models.BooleanField(default=True)),
-                ('priority', models.IntegerField(choices=[(1, 'Low'), (2, 'Medium'), (3, 'High')], default=1)),
+                ('effort', models.IntegerField(choices=[(1, 'Low'), (2, 'Medium'), (3, 'High')], default=1)),
                 ('created_at', models.DateTimeField(default=django.utils.timezone.now)),
                 ('updated_at', models.DateTimeField(default=django.utils.timezone.now)),
             ],
