@@ -12,7 +12,6 @@ class Todo(models.Model):
         HIGH = 3
 
     date = models.DateField()
-    order = models.IntegerField()
     description = models.CharField(max_length=128)
     is_completed = models.BooleanField(default=False)
     effort = models.IntegerField(default=Effort.LOW, choices=Effort.choices)
