@@ -1,4 +1,4 @@
-from main.settings.base import *
+from django.challenge.main.settings.settings import *
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
